@@ -1,0 +1,94 @@
+HTML & CSS Interview questions.
+
+1. What are block elements? 
+-> A block-level element is an HTML element that begins a new line on a web page and extends the full width of the available horizontal space of its parent element. It creates large blocks of content like paragraphs or page divisions.
+
+
+2. What were the new tags/elements brought in HTML5?
+-> <article>, <audio>, <details>, <time>, <nav>, and many more.
+
+
+3. Have you used PreCSS? What is it?
+-> PreCSS is a tool that allows you to use Sass-like markup in your CSS files. It lets you enjoy a familiar syntax with variables, mixins, conditionals and other goodies. PreCSS is actually just made up of a number of smaller PostCSS plugins.
+
+
+4. What is the difference between Margin and padding?
+-> Margin is the outer space of an element, while padding is the inner space of an element. In other words, margin is the space outside of an element's border, while padding is the space inside of its border.
+
+
+5. Is padding included in the element?
+-> Padding is used to create space around an element's content, inside of any defined borders.
+
+
+6. What types of selectors are used in CSS? 
+-> CSS Selectors allow us to target specific HTML elements with our style sheets.
+ There are many basic different types of selectors.
+
+-Element Selector
+-Id Selector
+-Class Selector
+-Universal Selector
+-Group Selector
+
+
+7. What are the available values for property "position"? What happens when you use each value? 
+-> There are five different position values:
+-static.
+-relative.
+-absolute.
+-fixed.
+-sticky.
+
+static: 
+every element has a static position by default, so the element will stick to the normal page flow. So if there is a left/right/top/bottom/z-index set then there will be no effect on that element.
+
+relative: 
+an element’s original position remains in the flow of the document, just like the static value. But now left/right/top/bottom/z-index will work. The positional properties “nudge” the element from the original position in that direction.
+
+absolute: 
+the element is removed from the flow of the document and other elements will behave as if it’s not even there whilst all the other positional properties will work on it.
+
+fixed: 
+the element is removed from the flow of the document like absolutely positioned elements. In fact they behave almost the same, only fixed positioned elements are always relative to the document, not any particular parent, and are unaffected by scrolling.
+
+sticky:
+the element is treated like a relative value until the scroll location of the viewport reaches a specified threshold, at which point the element takes a fixed position where it is told to stick.
+
+
+8. How can I show two div tag elements side by side? 
+-> There are 3 ways you can use CSS to place HTML div elements side by side.
+
+-Float method
+-Flexbox method
+-CSS grid method
+
+
+9. Explain the term responsive web design? 
+-> Responsive web design (RWD) is a web development approach that creates dynamic changes to the appearance of a website, depending on the screen size and orientation of the device being used to view it.
+
+
+10. What is css flexbox? 
+-> Flexbox is a one-dimensional layout method for arranging items in rows or columns. Items flex (expand) to fill additional space or shrink to fit into smaller spaces.
+
+
+11. What is CSS opacity?
+-> Opacity is the extent to which something blocks light.
+The opacity CSS property sets the opacity of an element. Opacity is the degree to which content behind an element is hidden, and is the opposite of transparency.
+
+
+12. When click on button you need to scroll to the particular div using HTML
+->
+
+
+13. What is specificity in CSS ?
+-> If there are two or more conflicting CSS rules that point to the same element, the browser follows some rules to determine which one is most specific and therefore wins out.
+
+Specificity Hierarchy:-
+-Inline styles
+-IDs
+-Classes, attributes and pseudo-classes
+-Elements and pseudo-elements
+
+
+14. What is Flex Box?
+-> The Flexible Box Module, usually referred to as flexbox, was designed as a one-dimensional layout model, and as a method that could offer space distribution between items in an interface and powerful alignment capabilities.

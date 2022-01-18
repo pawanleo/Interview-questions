@@ -1,0 +1,107 @@
+JAVASCRIPT Interview questions.
+
+
+1. Difference between null and undefined? 
+-> Null is a special value meaning "no value". null is a special object because typeof null returns 'object'. On the other hand, undefined means that the variable has not been declared, or has not been given a value.
+
+
+2. What are promises ?
+-> Promises are a way to implement async programming in JavaScript(ES6). A Promise will become a container for future value.
+
+-A promise is an object that may produce a single value some time in the future: either a resolved value, or a reason that it’s not resolved (e.g., a network error occurred). A promise may be in one of 3 possible states: fulfilled, rejected, or pending. Promise users can attach callbacks to handle the fulfilled value or the reason for rejection.
+
+
+3. What is Async await?
+->Async/Await is the extension of promises which we get as a support in the language.
+
+-Async:
+It simply allows us to write promises based code as if it was synchronous and it checks that we are not breaking the execution thread. It operates asynchronously via the event-loop. Async functions will always return a value. It makes sure that a promise is returned and if it is not returned then javascript automatically wraps it in a promise which is resolved with its value.
+
+-Await:
+Await function is used to wait for the promise. It could be used within the async block only. It makes the code wait until the promise returns a result. It only makes the async block wait.
+
+
+4. Javascript is single threaded or multiple threaded and asynchronous or synchronous? 
+-> JavaScript is always synchronous and single-threaded. If you're executing a JavaScript block of code on a page then no other JavaScript on that page will currently be executed.
+
+-JavaScript is only asynchronous in the sense that it can make, for example, Ajax calls. The Ajax call will stop executing and other code will be able to execute until the call returns (successfully or otherwise), at which point the callback will run synchronously. No other code will be running at this point. It won't interrupt any other code that's currently running.
+
+
+5. How to center the div tag on dom?
+-> div object.align="center"
+
+
+6. What are callback functions?
+-> A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action. The above example is a synchronous callback, as it is executed immediately.
+
+
+7. What is Closure how do we implement closure?
+-> Closure means that an inner function always has access to the vars and parameters of its outer function, even after the outer function has returned.
+
+-Closures are typically implemented with a special data structure that contains a pointer to the function code, plus a representation of the function's lexical environment (i.e., the set of available variables) at the time when the closure was created.
+
+
+8. What is Debouncing and throttling ?
+-> Throttling is a way to limit the number of times a function can be called. Perform a function, then drop all the function calls until a certain period of time, Debouncing is a way to delay the execution of a function to a later period until there is some ongoing action.
+
+
+9. Prototype in javascript with example.
+-> Prototypes are the mechanism by which JavaScript objects inherit features from one another.
+
+
+10. Event loop.
+-> The event loop is a constantly running process that monitors both the callback queue and the call stack.
+
+- The event loop works by making a request to some internal or external "event provider" (that generally blocks the request until an event has arrived), then calls the relevant event handler ("dispatches the event").
+ 
+
+11. What is the use of filter, map, reduce ?
+-Filter
+The filter() method takes each element in an array and it applies a conditional statement against it. If this conditional returns true, the element gets pushed to the output array. If the condition returns false, the element does not get pushed to the output array.
+
+-Map
+The map() method is used for creating a new array from an existing one, applying a function to each one of the elements of the first array.
+
+-Reduce
+The reduce() method reduces an array of values down to just one value. To get the output value, it runs a reducer function on each element of the array.
+
+
+12. Difference between map and for loop 
+-> Map
+	Map is a collection of elements where each element is stored as a Key, value pair. Map object can hold both objects and primitive values as either key or value. When we iterate over the map object it returns the key, value pair in the same order as inserted.
+
+-For Loop
+	A JavaScript for loop executes a block of code as long as a specified condition is true. JavaScript for loops take three arguments: initialization, condition, and increment. The condition expression is evaluated on every loop. A loop continues to run if the expression returns true.
+
+-Map does exactly the same thing as what the for loop does, except that map creates a new array with the result of calling a provided function on every element in the calling array.
+
+
+13. Difference between slice and splice
+-> Splice and Slice both are Javascript Array functions. The splice() method returns the removed item(s) in an array and slice() method returns the selected element(s) in an array, as a new array object. The splice() method changes the original array and slice() method doesn't change the original array.
+
+
+14. Difference between Standard function and Arrow Function
+-> Regular functions created using function declarations or expressions are constructible and callable. Since regular functions are constructible, they can be called using the new keyword. However, the arrow functions are only callable and not constructible, i.e arrow functions can never be used as constructor functions.
+
+
+15. Difference between == and ===
+-> The ‘==’ operator tests for abstract equality i.e. it does the necessary type conversions before doing the equality comparison.
+But the ‘===’ operator tests for strict equality i.e it will not do the type conversion hence if the two values are not of the same type, when compared, it will return false.
+
+
+16. What is ES6? 
+-> JavaScript ES6 (also known as ECMAScript 2015 or ECMAScript 6) is the newer version of JavaScript that was introduced in 2015. ECMAScript is the standard that JavaScript programming language uses. ECMAScript provides the specification on how JavaScript programming language should work.
+ 
+
+17. Oops concept
+-> The basic idea of OOP is that we use objects to model real world things that we want to represent inside our programs, and/or provide a simple way to access functionality that would otherwise be hard or impossible to make use of.
+
+
+18. How can you achieve a class feature before ES6?
+-> Prior to ES6, creating a class was a fussy affair. Classes can be created using the class keyword in ES6. Classes can be included in the code either by declaring them or by using class expressions.
+
+
+19. Tell me about Promises?
+-> The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+
+-The Promise object supports two properties: state and result. While a Promise object is "pending" (working), the result is undefined. When a Promise object is "fulfilled", the result is a value. When a Promise object is "rejected", the result is an error object.

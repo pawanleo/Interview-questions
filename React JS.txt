@@ -1,0 +1,189 @@
+React Js Interview questions
+
+
+
+1. What is React Js?
+-> React is a free and open-source front-end JavaScript library for building user interfaces based on UI components. It is maintained by Meta and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.
+
+
+2. Advantages of React?
+-> Advantage of ReactJS:-
+-Easy to Learn and USe
+-Creating Dynamic Web Applications Becomes Easier
+-Reusable Components
+-Performance Enhancement
+-The Support of Handy Tools
+-Known to be SEO Friendly
+-The Benefit of Having JavaScript Library
+-Scope for Testing the Codes
+
+
+3. How does React Js virtual Dom work ?
+-> React uses virtual DOM to enhance its performance. It uses the observable to detect state and prop changes. React uses an efficient diff algorithm to compare the versions of virtual DOM. It then makes sure that batched updates are sent to the real DOM for repainting or re-rendering of the UI.
+
+
+4. What is the state?
+-> State is a plain JavaScript object used by React to represent an information about the component's current situation. It's managed in the component (just like any variable declared in a function).
+ 
+
+5. Difference between state and prop.
+-> State:
+The state is an updatable structure that is used to contain data or information about the component and can change over time. The change in state can happen as a response to user action or system event. It is the heart of the react component which determines the behavior of the component and how it will render. A state must be kept as simple as possible. It represents the component's local state or information. It can only be accessed or modified inside the component or by the component directly.
+
+Props:
+Props are read-only components. It is an object which stores the value of attributes of a tag and work similar to the HTML attributes. It allows passing data from one component to other components. It is similar to function arguments and can be passed to the component the same way as arguments passed in a function. Props are immutable so we cannot modify the props from inside the component.
+
+
+6. What is the use of refs?
+-> Refs provide a way to access DOM nodes or React elements created in the render method. In the typical React dataflow, props are the only way that parent components interact with their children. To modify a child, you re-render it with new props.
+
+
+7. How to change state?
+-> To change a value in the state object, use the this. setState() method. When a value in the state object changes, the component will re-render, meaning that the output will change according to the new value(s).
+
+
+8. What are higher order components?
+-> A higher-order component (HOC) is an advanced technique in React for reusing component logic. HOCs are not part of the React API, per se. They are a pattern that emerges from React's compositional nature. Concretely, a higher-order component is a function that takes a component and returns a new component.
+ 
+
+9. How can you update the state from the child component?
+-> We can create ParentComponent and with a handleInputChange method to update the ParentComponent state. Import the ChildComponent and we pass two props from the parent to the child component i.e., the handleInputChange function and count. Now we create the ChildComponent file and save it as ChildComponent.jsx.
+
+
+10. What is the Error boundary? Why use it and how? 
+-> Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed. Error boundaries catch errors during rendering, in lifecycle methods, and in constructors of the whole tree below them.
+
+-Reason to Use: Suppose there is an error in JavaScript inside component then it used to corrupt React's internal state and cause it to emit cryptic errors. Error boundaries help in removing these errors and display a Fallback UI instead(Which means a display of an error that something broke in the code).
+
+-How to use:
+Step-1 Create a class which extends React component and passes the props inside it.
+
+Step-2 Now, add componentDidCatch() method which allows you to catch error in the components below them in the tree.
+
+Step-3 Next add render() method, which is responsible for how the component should be rendered. For example, it will display the error message like "Something is wrong."
+
+
+11. What is component and types of components?
+-> Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML. Components come in two types, Class components and Function components, in this tutorial we will concentrate on Function components.
+
+
+12. Explain about lifecycle methods
+-> We have seen so far that React web apps are actually a collection of independent components that run according to the interactions made with them. Every React Component has a lifecycle of its own, lifecycle of a component can be defined as the series of methods that are invoked in different stages of the component’s existence. The definition is pretty straightforward but what do we mean by different stages? A React Component can go through four stages of its life as follows. 
+ 
+-Initialization: This is the stage where the component is constructed with the given Props and default state. This is done in the constructor of a Component Class.
+
+-Mounting: Mounting is the stage of rendering the JSX returned by the render method itself.
+
+-Updating: Updating is the stage when the state of a component is updated and the application is repainted.
+
+-Unmounting: As the name suggests Unmounting is the final step of the component lifecycle where the component is removed from the page. 
+
+
+13. What is Pure component and which lifecycle method do we use for pure component
+-> Pure Components in React are the components which do not re-renders when the value of state and props has been updated with the same values. If the value of the previous state or props and the new state or props is the same, the component is not re-rendered.
+
+-We have a lifecycle method called shouldComponentUpdate which by default returns true (Boolean) value. The purpose of the shouldComponentUpdate is we can custom implement the default behavior and decide when react should update or re-render the component.
+
+
+14. Explain React router concepts
+-> Routing is a process in which a user is directed to different pages based on their action or request. ReactJS Router is mainly used for developing Single Page Web Applications. React Router is used to define multiple routes in the application.
+
+
+15. How do you programmatically  navigate to other page? 
+-> If you want programmatically navigation from one page to another then you should use history. push method. In other words, we can say if you want to manage the redirection on button click then you can use it. This function will push a new entry in the history stack.
+ 
+
+16. How is React Single Page Application explain with an example.
+-> A single-page application is an application that loads a single HTML page and all the necessary assets (such as JavaScript and CSS) required for the application to run. Any interactions with the page or subsequent pages do not require a round trip to the server which means the page is not reloaded.
+
+-Examples : Netflix, facebook, etc
+
+17. What is redux & what are the redux principles?
+-> Redux is an open-source JavaScript library for managing and centralizing application state. It is most commonly used with libraries such as React or Angular for building user interfaces.
+
+-Redux can be described in three fundamental principles:
+Single source of truth
+State is read-only
+Changes are made with pure functions
+
+
+18. Explain in detail about different components of redux? 
+-> Redux has 4 components namely - Store, Reducer, Action and Middleware.
+
+-Store:
+A store is an immutable object tree in Redux. A store is a state container which holds the application's state. Redux can have only a single store in your application.
+
+-Reducer:
+A reducer is a pure function, which returns the state of the application based on the action dispatched by the store.
+
+-Action:
+It is a payload of information that transmits data from an application to a store. They are the sole source of information for the store. One can send them to the store using store. dispatch() .
+An action is Redux speaks for a plain object with a property called type. Actions are free-forms things. 
+
+-Middleware:
+Middleware is the suggested way to extend Redux with custom functionality. Middlewares are used to dispatch async functions. We configure Middleware’s while creating a store.
+
+
+19. How do we mimic lifecycle methods in hooks 
+-> With functional components, some of these lifecycle methods are mimicked with react hooks. Mostly useState() and useEffect() hook.
+
+
+20. How many states promise to have after resolution?
+-> there are no states after resolution 
+
+21. What are Hooks?
+-> Hooks are the new feature introduced in the React 16.8 version. It allows you to use state and other React features without writing a class. Hooks are the functions which "hook into" React state and lifecycle features from function components. It does not work inside classes.
+
+Hooks are backward-compatible, which means it does not contain any breaking changes. Also, it does not replace your knowledge of React concepts.
+
+
+22. How to use rest api in React JS
+-> we can consume REST APIs using two of the most popular methods known as Axios (a promise-based HTTP client) and Fetch API (a browser in-built web API).
+
+23. Tell me a feature that is not available in functional component yet (Note: which is available in class component) 
+->  
+
+24. Explain about useSelector, useDispatch.
+->useSelector:
+useSelector is a function that takes the current state as an argument and returns whatever data you want from it. It's very similiar to mapStateToProps() and it allows you to store the return values inside a variable within the scope of you functional components instead of passing down as props.
+
+-useDispatch
+useDispatch is a function that we import from react-redux library and assign it to a variable. And with this, we are able to dispatch any action to the store by simply adding an action as an argument to the new variable like the code above and that's it.
+
+
+25. Local storage and Session Storage
+-> Local Storage:
+LocalStorage is a web storage object to store the data on the user's computer locally, which means the stored data is saved across browser sessions and the data stored has no expiration time.
+
+-Session Storage:
+Session storage is a popular choice when it comes to storing data on a browser. It enables developers to save and retrieve different values. Unlike local storage, session storage only keeps data for a particular session. The data is cleared once the user closes the browser window.
+
+
+26. How to stop Rendering
+-> To avoid re-rendering per component with the you will use the shouldComponentUpdate() lifecycle.
+
+
+27. Set time out/Set interval
+-> setTimeout:
+The setTimeout function accepts two arguments: the first is the callback function that we want to execute, and the second specifies the timeout in milliseconds before the function will be called. setTimeout(() => console. log('Initial timeout!' ), 1000); In React, we use it the same way.
+
+-setInterval:
+The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call. This method returns an interval ID which uniquely identifies the interval, so you can remove it later by calling clearInterval()
+
+
+28. What is Hoisting?
+-> Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution. Inevitably, this means that no matter where functions and variables are declared, they are moved to the top of their scope regardless of whether their scope is global or local.
+
+
+29. How to fetch api?
+->The easiest way to start using an API is by finding an HTTP client online, like REST-Client, Postman, or Paw.
+
+
+30. What is AWS
+-> The full form of AWS is Amazon Web Services. It is a platform that offers flexible, reliable, scalable, easy-to-use and, cost-effective cloud computing solutions.
+
+AWS is a comprehensive, easy to use computing platform offered Amazon. The platform is developed with a combination of infrastructure as a service (IaaS), platform as a service (PaaS) and packaged software as a service (SaaS) offerings.
+
+
+31. How to run bootstrap ?
+Navigate to the root /bootstrap/ directory, then run npm install . npm will look at the package.json file and automatically install the necessary local files and then copy the code in index.js or app.js 
